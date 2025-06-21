@@ -71,3 +71,12 @@ CREATE TABLE IF NOT EXISTS centru_ajutor(
 	campus_universitar_fid integer not null,
 	foreign key(campus_universitar_fid) references campus_universitar(fid)
 );
+
+CREATE TABLE IF NOT EXISTS cladiri(
+	fid serial primary key not null,
+	nume varchar(100) not null,
+	functie varchar(100) not null,
+	geom geometry('Polygon', 4326) not null,
+	campus_universitar_fid integer not null,
+	foreign key(campus_universitar_fid) references campus_universitar(fid)
+);
