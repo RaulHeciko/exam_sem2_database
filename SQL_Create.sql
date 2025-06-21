@@ -25,7 +25,6 @@ CREATE TABLE IF NOT EXISTS evenimente_campus(
 CREATE TABLE IF NOT EXISTS piste_alergat(
 	fid serial primary key not null,
 	numar_piste integer not null,
-	lungime_piste integer not null,
 	latime_piste integer not null,
 	geom geometry('LineString', 4326) not null,
 	campus_universitar_fid integer not null,
